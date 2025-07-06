@@ -62,12 +62,6 @@ We implemented and evaluated **6 different algorithms** for both classification 
 - **XGBoost Regression**
 - **SVM Regression**
 
-🛠️ Installation & Setup
-Development Environment
-
-Neural Networks & XGBoost: Implemented in Deepnote for faster execution and GPU acceleration
-Other Models: Developed in Visual Studio Code for local development and testing
-
 ## 📈 Model Evaluation
 
 **Training Setup:**
@@ -86,3 +80,59 @@ Other Models: Developed in Visual Studio Code for local development and testing
 - Root Mean Square Error (RMSE)
 - R² Score
 - Mean Absolute Percentage Error (MAPE)
+
+## 🎯 Model Results & Predictions
+
+All model predictions are saved and converted for comprehensive analysis:
+
+**Prediction Storage:**
+- **Regression Models**: Save point differential predictions and convert to binary win/loss outcomes
+- **Classification Models**: Save direct binary predictions  
+- **Comparison Analysis**: Both approaches evaluated on the same binary classification task
+- **Multiple Datasets**: Results stored for all 4 feature sets (A, B, C, D) and 21 rolling windows
+- **Training Strategies**: Separate results for single-season and two-season trainin
+
+## 🛠️ Installation & Setup
+
+### Development Environment
+- **Neural Networks & XGBoost**: Implemented in **Deepnote** for faster execution 
+- **Other Models**: Developed in **Visual Studio Code** for local development and testing
+
+### Prerequisites
+```bash
+pip install pandas numpy scikit-learn xgboost matplotlib seaborn jupyter
+```
+
+### Required Libraries
+```python
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+import xgboost as xgb
+from sklearn.metrics import classification_report, accuracy_score
+```
+
+
+
+## 🤝 Contributing
+
+Feel free to contribute by:
+1. Forking the repository
+2. Creating a feature branch
+3. Making your improvements
+4. Submitting a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- **Data Source**: [Kaggle - NBA Games Dataset](https://www.kaggle.com/datasets/nathanlauga/nba-games) by Nathan Lauga
+- **NBA Statistics**: Thanks to the NBA for providing comprehensive game and player statistics
+- **Open Source Community**: Built using scikit-learn, pandas, and other open-source libraries
