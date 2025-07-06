@@ -33,12 +33,21 @@ All data cleaning and feature engineering steps are implemented in the preproces
 5. Generate target variables (win/loss classification and point difference regression)
 6. Export processed datasets for model training
 
+### `SVMHyper.ipynb`
+
+**Hyperparameter Tuning for SVM:**
+- **Purpose**: Optimizes SVM performance by finding the best hyperparameters
+- **Method**: Uses best-performing season data with fixed optimal gamma and kernel parameters
+- **Search Strategy**: Extensive grid search on regularization parameter (C) values
+- **Evaluation**: Compares train vs test F1 scores to identify optimal C value and detect overfitting
+- **Visualization**: Plots performance curves to visualize hyperparameter impact on model performance
+
 ## 🤖 Machine Learning Models
 
 We implemented and evaluated **6 different algorithms** for both classification and regression tasks:
 
 ### Classification Models (Win/Loss Prediction)
-- **Logistic Regression**
+- **Naive Bayes**
 - **k-Nearest Neighbors (kNN)**
 - **Decision Tree**
 - **Random Forest**
@@ -52,6 +61,12 @@ We implemented and evaluated **6 different algorithms** for both classification 
 - **Random Forest Regression**
 - **XGBoost Regression**
 - **SVM Regression**
+
+🛠️ Installation & Setup
+Development Environment
+
+Neural Networks & XGBoost: Implemented in Deepnote for faster execution and GPU acceleration
+Other Models: Developed in Visual Studio Code for local development and testing
 
 ## 📈 Model Evaluation
 
